@@ -68,11 +68,20 @@ const Navbar = () =>
                     </button>
                 </div>   
             </div>   
-            <div className={`space-y-4 px-4 mt-16 py-7 bg-brandPrimary ${isMenuOpen ? "block fixed left-0 right-0 top-0" : "hidden"}`}>
+            <div className={`space-y-4 px-4 py-10 bg-white flex flex-col items-center h-[450px] mt-[114px] text-base  ${isMenuOpen ? "block fixed left-0 right-0 top-0" : "hidden"}`}>
                 {
                     navItems.map(({link, path}) => 
-                    <Link to={path} spy={true} smooth={true} offset={-100} key={path} className='block text-base text-black hover:text-brandPrimary first:font-medium'>{link}</Link>)
+                    <Link to={path} spy={true} smooth={true} offset={-100} key={path} className='block text-black hover:text-brandPrimary first:font-medium'>{link}</Link>)
                 }
+               
+                <div>
+                    <button className='lg:flex items-center text-brandPrimary hover:text-gray900' onClick={() => setOpenModel(true)} >Login</button>
+                    {openModel && <LoginModel closeModal={setOpenModel} /> }
+                </div>
+                <div>
+                    <button className='bg-brandPrimary text-white py-2 px-4 transition-all duration-300 rounded hover:bg-neutralDGrey' onClick={() => setOpenSignUp(true)}>Sign Up</button>
+                    {openSignUp && <SignUpModel closeModal={setOpenSignUp} /> }
+                </div>
             </div>
         </nav>
        </header>

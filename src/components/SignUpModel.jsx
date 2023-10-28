@@ -4,7 +4,7 @@ import { Button, Checkbox, Label, TextInput } from "flowbite-react";
 const SignUpModel = ({ closeModal }) => {
   return (
     <form className="flex flex-col justify-center items-center fixed top-0 left-0 right-0 bottom-0 backdrop-blur-md">
-      <div className="modalContainer">
+      <div className="modalContainer max-sm:max-w-sm">
         <div className="titleCloseBtn">
           <button
             onClick={() => {
