@@ -7,8 +7,6 @@ import Services from './components/Services'
 import Blog from './components/Blog'
 import Newsletter from './components/Newsletter'
 import Footers from './components/Footer'
-
-
 function App() {
   return (
     <>

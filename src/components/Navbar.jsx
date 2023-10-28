@@ -2,18 +2,20 @@ import React, { useEffect } from 'react'
 import logo from '../assets/logo.png'
 import { Link } from 'react-scroll';
 import {FaXing , FaBars} from 'react-icons/fa';
+import LoginModel from './LoginModel';
+import SignUpModel from './SignUpModel'
 
 const Navbar = () => 
 {
    const [isMenuOpen, setIsMenuOpen] = React.useState(false);
    const [isSticky, setIsSticky] = React.useState(false);
-//    const [model, setModel] = React.useState(false);
+   const [openModel, setOpenModel] = React.useState(false);
+   const [openSignUp, setOpenSignUp] = React.useState(false);
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
-        
     };
-
+    
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY > 100) {
@@ -48,8 +50,14 @@ const Navbar = () =>
                     }
                 </ul>
                 <div className='space-x-12 hidden lg:flex items-center'>
-                    <a href='/' className='hidden lg:flex items-center text-brandPrimary hover:text-gray900'>Login</a>
-                    <button className='bg-brandPrimary text-white py-2 px-4 transition-all duration-300 rounded hover:bg-neutralDGrey'>Sign Up</button>
+                    <div>
+                        <button className='hidden lg:flex items-center text-brandPrimary hover:text-gray900' onClick={() => setOpenModel(true)} >Login</button>
+                        {openModel && <LoginModel closeModal={setOpenModel} /> }
+                    </div>
+                    <div>
+                        <button className='bg-brandPrimary text-white py-2 px-4 transition-all duration-300 rounded hover:bg-neutralDGrey' onClick={() => setOpenSignUp(true)}>Sign Up</button>
+                        {openSignUp && <SignUpModel closeModal={setOpenSignUp} /> }
+                    </div>
                 </div>
 
                 <div className='md:hidden'>
