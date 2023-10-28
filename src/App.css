@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Monda&family=Poppins:wght@200;300;400;600;800&family=Roboto:wght@300;400;500;700&display=swap');
+
+body{
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-family: 'Monda', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Roboto', sans-serif;
+}
+
+header{
+  z-index: 10001 !important;
+}
+
+.btn-primary{
+  @apply
+  px-7 py-2 bg-brandPrimary text-white rounded hover:bg-neutralDGrey transition-all duration-300 hover:-translate-y-4;
+}
+
+.slick-slide > div{
+  margin: 0 10px;
+}
