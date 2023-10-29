@@ -32,8 +32,8 @@ const Navbar = () =>
 
     const navItems = [
         { link:"Nasıl Çalışır", path:"home"},
-        { link:"Hakkımızda", path:"service"},
-        { link:"Psikologlarımız", path:"about"},
+        { link:"Hakkımızda", path:"about"},
+        { link:"Psikologlarımız", path:"psklg"},
         { link:"S.S.S.", path:"product"}
     ];
 

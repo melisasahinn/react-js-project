@@ -7,7 +7,7 @@ const Services = () => {
         {id:3, title:'Terapi Seanslarının Dışında da Huzurlu Hisset!', descroption:"lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, quod.", image:"../assets/Vector.png" }
     ]
     return (
-        <div className='md:px-14 px-4 py-16 max-w-screen-2xl mx-auto'  id='service'>
+        <div className='md:px-14 px-4 py-16 max-w-screen-2xl mx-auto' >
             <div className='text-center my-8'>
                 <h2 className='text-4xl text-neutralDGrey font-semibold mb-2'>Our Clients</h2>
                 <p className='text-neutralGrey'>We have worked with some of the best companies</p>
@@ -15,6 +15,7 @@ const Services = () => {
                 <div className='flex justify-center'>
                     <img src={Company} alt='' />
                 </div>
+                <div id="home"></div>
             </div> 
             <div className='mt-20 md:w-1/2 mx-auto text-center'>
                 <h2 className='text-4xl text-neutralDGrey font-semibold mb-3'>Nasıl Çalışır?</h2>
