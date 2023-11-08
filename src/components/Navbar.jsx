@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import logo from '../assets/logo.png'
-import { Link } from 'react-scroll';
+import { Link } from 'react-router-dom';
 import {FaXing , FaBars} from 'react-icons/fa';
 import LoginModel from './LoginModel';
 import SignUpModel from './SignUpModel'
@@ -30,24 +30,18 @@ const Navbar = () =>
         };
     });
 
-    const navItems = [
-        { link:"Nasıl Çalışır", path:"home"},
-        { link:"Hakkımızda", path:"about"},
-        { link:"Psikologlarımız", path:"psklg"},
-        { link:"S.S.S.", path:"product"}
-    ];
-
     return ( 
        <header className='w-full bg-white md:bg-transparent fixed top-0 left-0 right-0 text-black'>
         <nav className={`py-8 lg:px-14 px-4 m-2 rounded-3xl ${isSticky ? "sticky top-0 left-0 right-0 border bg-white duration-300" :""}`}>
             <div className='flex justify-between items-center text-xl gap-8'>
-                <a href='' className='text-3xl font-semibold flex items-center space-x-3'><img src={logo} alt="" className='w-10 inline-block items-center' /><span className='text-[#263238]'>XXXX</span></a>
+                <a href='/' className='text-3xl font-semibold flex items-center space-x-3'><img src={logo} alt="" className='w-10 inline-block items-center' /><span className='text-[#263238]'>XXXX</span></a>
                 <ul className='md:flex space-x-12 hidden'>
-                    {
-                        navItems.map(({link, path}) => 
-                            <Link to={path} spy={true} smooth={true} offset={-100} key={path} className='block text-xl text-gray900 hover:text-brandPrimary first:font-medium'>{link}</Link>
-                        )
-                    }
+                    
+                    <li><Link to="/nasilcalisir">Nasıl Çalışır</Link></li>
+                    <li><Link to="/hakkimizda">Hakkımızda</Link></li>
+                    <li><Link to="/psikolog">Psikolog</Link></li>
+                    <li><Link to="/sss">SSS</Link></li>
+
                 </ul>
                 <div className='space-x-12 hidden lg:flex items-center'>
                     <div>
@@ -69,10 +63,11 @@ const Navbar = () =>
                 </div>   
             </div>   
             <div className={`space-y-4 px-4 py-10 bg-white flex flex-col items-center h-[450px] mt-[114px] text-base  ${isMenuOpen ? "block fixed left-0 right-0 top-0" : "hidden"}`}>
-                {
-                    navItems.map(({link, path}) => 
-                    <Link to={path} spy={true} smooth={true} offset={-100} key={path} className='block text-black hover:text-brandPrimary first:font-medium'>{link}</Link>)
-                }
+                    
+                    <li><Link to="/">Nasıl Çalışır</Link></li>
+                    <li><Link to="/">Hakkımızda</Link></li>
+                    <li><Link to="/psikolog">Psikolog</Link></li>
+                    <li><Link to="/sss">SSS</Link></li>
                
                 <div>
                     <button className='lg:flex items-center text-brandPrimary hover:text-gray900' onClick={() => setOpenModel(true)} >Login</button>
