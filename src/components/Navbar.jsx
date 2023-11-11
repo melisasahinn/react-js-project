@@ -61,8 +61,8 @@ const Navbar = () =>
 
 
     return ( 
-       <header className='w-full  md:bg-transparent fixed top-0 left-0 right-0 text-black'>
-        <nav className={`py-8 lg:px-14 px-4 m-2 rounded-3xl ${isSticky ? "sticky top-0 left-0 right-0 border bg-white duration-300" :""}`}>
+       <header className='w-full md:bg-transparent fixed top-0 left-0 right-0 text-black'>
+        <nav className={`py-8 lg:px-14 px-4 mt-[15px] rounded-3xl ${isSticky ? "sticky top-0 left-0 right-0 border bg-white duration-300" :""}`}>
             <div className='flex justify-between items-center text-xl gap-8'>
                 <a href='/' className='text-3xl font-semibold flex items-center space-x-3'><img src={logo} alt="" className='w-10 inline-block items-center' /><span className='text-[#263238]'>XXXX</span></a>
                 <ul className='md:flex space-x-12 hidden'>
@@ -92,7 +92,7 @@ const Navbar = () =>
                     </button>
                 </div>   
             </div>   
-            <div className={`space-y-4 px-4 py-10 bg-white flex flex-col items-center h-[450px] mt-[114px] text-base  ${isMenuOpen ? "block fixed left-0 right-0 top-0" : "hidden"}`}>
+            <div className={`space-y-4 px-4 py-10 bg-white flex flex-col items-center h-[1000px] mt-[104px] text-base  ${isMenuOpen ? "block fixed left-0 right-0 top-0" : "hidden"}`}>
                 <ul className='text-center gap-4 text-lg' onClick={refreshPage}> 
                     
                     <li><Link to="/nasilcalisir" onClick={rspServicehandleClick}> Nasıl Çalışır</Link></li>
