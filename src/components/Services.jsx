@@ -1,4 +1,3 @@
-import React from 'react'
 import Company from '../assets/icons/company1.png'
 const Services = () => {
     const services =[

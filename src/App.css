@@ -90,3 +90,8 @@ header{
 #cancelBtn {
   background-color: crimson;
 }
+
+
+.ReactCollapse--collapse{
+  transition: height 500ms;
+}
