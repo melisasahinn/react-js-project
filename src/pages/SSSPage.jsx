@@ -41,8 +41,14 @@ export default function SSSPage () {
   return (
     <div>
         <Navbar></Navbar>
-        <section className='bg-neutralSilver h-screen grid place-items-center'>
-          <div className='px-[40px] max-w-[800px]'>
+        <div className="px-4 lg:px-14 max-w-screen- mx-auto w-full bg-neutralSilver py-16 ">
+                <div className="mt-[300px]">
+                    <h1 className='text-5xl font-semibold mb-4 text-neutralDGrey md:w-3/4 leading-snug'>Doğru Psikoloğu Bulmak İlk Adımdır</h1>
+                    <p className='text-neutralGrey text-base mb-8'>Sana en uygun, alanında uzman klinik psikoloğu bulmak için hazırladığımız testi şimdi çöz.</p>
+                </div>      
+        </div>
+        <section className='bg-gray-100 grid place-items-center'>
+          <div className='px-[40px] max-w-[800px] mt-[100px] mb-[150px]'>
             {accordionData.map((data,index) => {
               return (
               <AccordionItem 
