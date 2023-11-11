@@ -1,3 +1,4 @@
+import { forwardRef } from 'react'
 import Company from '../assets/icons/company1.png'
 const Services = () => {
     const services =[
@@ -14,7 +15,7 @@ const Services = () => {
                 <div className='flex justify-center'>
                     <img src={Company} alt='' />
                 </div>
-                <div id="home"></div>
+                <div></div>
             </div> 
             <div className='mt-20 md:w-1/2 mx-auto text-center'>
                 <h2 className='text-4xl text-neutralDGrey font-semibold mb-3'>Nasıl Çalışır?</h2>
@@ -37,4 +38,4 @@ const Services = () => {
     
 }
 
-export default Services;
+export default forwardRef(Services);
