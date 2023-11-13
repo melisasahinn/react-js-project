@@ -4,6 +4,7 @@ import './index.css'
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import PsikologPage from './pages/PsikologPage.jsx';
 import SSSPage from './pages/SSSPage.jsx';
+import MeetingPage from './pages/MeetingPage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
   {
     path: "sss",
     element: <SSSPage />
+  },
+  {
+    path:"/meeting",
+    element:<MeetingPage />
   }
 ]);
 

@@ -1,9 +1,13 @@
 
 import Footers from "../components/Footer";
 import Navbar from "../components/Navbar";
+import { Link } from "react-router-dom";
 
 function PsikologPage(){
 
+    const meetinghandleClick =() => {
+        window.scrollTo(0,0)
+    };
     return(
         <div>
              <Navbar></Navbar>
@@ -37,7 +41,9 @@ function PsikologPage(){
                             <div className="border"></div>
                             <a>09.11.2023 13:00</a>
                         </div>
-                        <a role='button' href='#' className="text-white bg-purple-600 px-3 py-3 mx-auto rounded-md hover:bg-purple-700 ">Randevu Al</a>
+                        <Link to="/meeting" onClick={meetinghandleClick} >
+                            <a role='button' href='#' className="text-white bg-purple-600 px-3 py-3 mx-auto rounded-md hover:bg-purple-700 ">Randevu Al</a>
+                        </Link>
                     </div>
                 </div>
                 <div className="w-80 p-2 bg-white rounded-xl transform transition-all hover:-translate-y-2 duration-300 shadow-lg hover:shadow-2xl">

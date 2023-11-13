@@ -72,6 +72,7 @@ const Navbar = () =>
                     <li><Link to="/psikolog" onClick={PsikologhandleClick} >Psikolog</Link></li>
                     <li><Link to="/sss" onClick={SSShandleClick}>SSS</Link></li>
 
+
                 </ul>
                 <div className='space-x-12 hidden lg:flex items-center'>
                     <div>
