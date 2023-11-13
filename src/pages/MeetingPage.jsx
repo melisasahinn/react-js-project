@@ -5,9 +5,9 @@ const MeetingPage = () => {
   return (
     <>
       <Navbar />
-      <div className="flex my-[200px]">
-        <div className=" mx-4 rounded-xl border border-neutralDGrey static max-h-[655px]">
-          <div className="flex justify-between">
+      <div className="flex my-[200px] max-lg:flex-col max-[480px]:flex-col">
+        <div className=" mx-4 rounded-xl border border-neutralDGrey static max-h-[655px] max-[450px]:max-h-[1374px]">
+          <div className="flex justify-between max-[450px]:contents">
             <div className="rounded-full m-12 h-[200px] w-[250px] border-2 border border-neutralDGrey max-w-[500px]"></div>
             <div className=" mt-8 p-16 text-semibold text-3xl">
               <h1 className="text-center">UZMAN PSİKOLOG</h1>
@@ -17,8 +17,8 @@ const MeetingPage = () => {
               <div className="border"></div>
             </div>
           </div>
-          <div className="p-2 p-4 mt-[-20px] text-2xl">Kategoriler</div>
-          <div className="flex gap-4 justify-center">
+          <div className="p-2 p-4 mt-[-20px] text-2xl max-lg:text-center">Kategoriler</div>
+          <div className="flex gap-4 justify-center max-[450px]:flex-col">
             <button className="rounded-xl p-2  border-2  border-neutralDGrey hover:bg-neutralDGrey hover:text-white">
               Depresyon
             </button>
@@ -35,7 +35,7 @@ const MeetingPage = () => {
               Sosyal Kaygı
             </button>
           </div>
-          <div className="flex gap-4 justify-center mt-4">
+          <div className="flex gap-4 justify-center mt-4 max-[450px]:flex-col">
             <button className="rounded-xl p-2  border-2  border-neutralDGrey hover:bg-neutralDGrey hover:text-white">
               Duygusal Yeme
             </button>
@@ -52,11 +52,11 @@ const MeetingPage = () => {
               Boşanma
             </button>
           </div>
-          <div className="border-2 mt-[20px] rounded-3xl bg-neutralSilver max-w-[700px] p-2">
+          <div className="border-2 mt-[20px] rounded-3xl bg-neutralSilver max-w-[700px] p-2 max-lg:m-auto max-lg:mt-2">
             <div className="flex flex-col items-center">
               <div>En Yakın Tarih</div>
               <div>
-                ------------------------------------------------------------------------------------------------------------
+                ---------------------------------------------------------------
               </div>
               <div>23.12.2023</div>
               <button className="bg-neutralDGrey p-4 m-2 rounded-xl text-white">
@@ -65,8 +65,8 @@ const MeetingPage = () => {
             </div>
           </div>
         </div>
-        <div>
-          <div className="mx-16 flex rounded-xl border border-white gap-4">
+        <div className="max-[700px]:m-[-20px] max-[529px]:mt-4">
+          <div className="mx-16 flex rounded-xl border border-white gap-4 max-lg:mt-8 max-[480px]:m--8 max-[450px]:flex-col">
             <div className="rounded-xl border border-blue flex flex-col justify-center text-center gap-4 p-4">
               <h1>Randevu</h1>
               <p>60 dakika görüntülü görüşme</p>
