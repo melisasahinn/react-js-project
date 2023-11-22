@@ -1,7 +1,10 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import OneSession from "./60MinuteSession";
+import React from "react";
 const MeetingPage = () => {
 
+  const [openModel, setOpenModel] = React.useState(false)
   return (
     <>
       <Navbar />
@@ -91,7 +94,8 @@ const MeetingPage = () => {
             <div className="rounded-xl border border-blue flex flex-col justify-center text-center gap-4 p-4">
               <h1>Randevu</h1>
               <p>60 dakika görüntülü görüşme</p>
-              <button className="p-4 rounded-xl bg-blue text-white hover:text-blue hover:bg-white hover:border border-blue">
+              <button className="p-4 rounded-xl bg-blue text-white hover:text-blue hover:bg-white hover:border border-blue" onClick={() => setOpenModel(true)}>
+              {openModel && <OneSession closeModal={setOpenModel} /> }
                 Seç
               </button>
             </div>
@@ -101,7 +105,7 @@ const MeetingPage = () => {
             <p className="m-4 mt-[-4px]">
               Scroll down for English. Merhabalar, ben Uzman Psikolog Ezgi Nur
               Budak. 2021 yılında MEF üniversitesi Psikoloji bölümünden mezun
-              olmanın ardından Macaristan'da Eötvös Lorand Üniversitesi'nde
+              olmanın ardından  Eötvös Lorannde
               Klinik ve Sağlık Psikolojisi alanında yüksek lisans eğitimimi
               başarıyla tamamladım ve yalnızca tez savunmamı gerçekleştirmek
               kaldı. Hem lisans hem de yüksek lisans eğitimim sürecinde başta
@@ -119,7 +123,7 @@ const MeetingPage = () => {
               hem Türkçe hem İngilizce destek sunmaktayım. Hello, I am
               Specialist Clinical and Health Psychologist Ezgi Nur Budak. After
               graduating from the Department of Psychology at MEF University in
-              2021, I successfully completed my master's degree in Clinical and
+              2021, I successfully completed my degree in Clinical and
               Health Psychology at Eötvös Lorand University in Hungary and I
               only have to defend my thesis. During both my undergraduate and
               graduate education, I completed my internships in private clinics,

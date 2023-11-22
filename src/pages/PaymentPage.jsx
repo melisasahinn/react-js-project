@@ -137,17 +137,17 @@ function ThankYou({ setConfirmed }) {
       <div className="thank-you flex flex-col items-center justify-center lg:h-screen max-w-lg mx-auto">
         <img src={tick} alt="" className="block mx-auto" />
         <h1 className="text-slate-800 text-3xl my-6 uppercase text-center">
-          Thank you!
+          Thank you Odemeniz Alinmistir
         </h1>
         <p className="text-slate-400 text-center">
-          We've added your card details
+          ilk seans sifreniz sectiginiz saat ve tarihte aktif olacaktir Diger seanslar icin sizinle iletisime gecilecektir  
         </p>
-        <button
-          onClick={() => setConfirmed(false)}
-          className="btn block mx-auto mt-10 w-full"
-        >
-          Continue
-        </button>
+        <h1 className="text-slate-800 text-3xl my-6 uppercase text-center">
+          sifreniz : 675675765
+        </h1>
+        <p className="text-slate-400 text-center">
+          SAGLIKLI GUNLER
+        </p>
       </div>
     </>
   );
